@@ -1,10 +1,12 @@
+import matplotlib
+matplotlib.use('TkAgg') 
 import matplotlib.pyplot as plt
 import numpy as np
 from skimage.measure import label
 from skimage.morphology import (binary_closing,binary_opening,binary_dilation, binary_erosion)
 
 
-data = np.load("stars.npy")
+data = np.load("./stars/stars.npy")
 
 mask1 = np.array([[1,0,0,0,1],
                  [0,1,0,1,0],
